@@ -4,6 +4,7 @@ import {  ShimmerThumbnail } from 'react-shimmer-effects'
 
 import 'react-bootstrap/dist/react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+const isBrowser = typeof window !== "undefined"
 
 
 
@@ -41,7 +42,7 @@ class IndexPage extends React.Component{
   }
 
   render(){
-    if (typeof window !== 'undefined'){
+    if (isBrowser){
       { 
         this.updatetimepage()}
      
