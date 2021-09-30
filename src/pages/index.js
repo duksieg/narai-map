@@ -44,12 +44,13 @@ class IndexPage extends React.Component{
     if (typeof window !== 'undefined'){
       { 
         this.updatetimepage()}
-     }
+     
     if (this.state.user == null) return <ShimmerThumbnail rounded></ShimmerThumbnail>
     return(<div className={'col'}>
     <LeafletMap user={this.state.user} ></LeafletMap>
     </div>)
   }
+}
 }
 
 

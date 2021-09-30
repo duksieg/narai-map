@@ -110,8 +110,7 @@ class LeafletMap extends React.Component {
   }
 
   render() {
-    if (typeof window !== 'undefined'){
-      { 
+   
     return (
       <>
         <div className="form d-flex justify-content-center my-4">
@@ -134,9 +133,9 @@ class LeafletMap extends React.Component {
         </MapContainer>
       </>
     );
-      }
+      
   }
     
-}
+
 }
 export default LeafletMap
