@@ -6,7 +6,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
         module: {
           rules: [
             {
-              test: /leaflet/dist/LeafletMap,
+              test: /bad-module/,
               use: loaders.null(),
             },
           ],
