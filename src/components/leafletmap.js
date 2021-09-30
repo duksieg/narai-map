@@ -4,7 +4,7 @@ import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import * as mapicon from '../components/mapicon'
-const isBrowser = typeof window !== "undefined"
+import {  ShimmerThumbnail } from 'react-shimmer-effects'
 
 class LeafletMap extends React.Component {
   constructor(props) {
@@ -17,6 +17,7 @@ class LeafletMap extends React.Component {
       setPosition: {},
       mapRef :React.createRef()
     }
+
     this.handleChange = this.handleChange.bind(this);
     this.usemapcenter = this.usemapcenter.bind(this);
     this.renderuserfromdata = this.renderuserfromdata.bind(this)
@@ -70,6 +71,7 @@ class LeafletMap extends React.Component {
     let result = this.props.user
     if (result != null) {
 
+
       result.records.forEach(record => {
         try {
           let pointlatlng
@@ -119,18 +121,18 @@ class LeafletMap extends React.Component {
   render() {
     return (
       <>
-        <div className="form d-flex justify-content-center">
-          <div className="col-md-3">
+        <div className="form d-flex justify-content-center my-4">
+          <div>
             <input type="text" className="form-control"  value={this.state.value} onChange={this.handleChange}
                 placeholder="รหัสเป้า" />
           </div>
-          <div className="col-md-2">
+          <div>
           <div className="btn btn-secondary" type="submit" value="Submit" onClick={this.usemapcenter} variant="primary" >
               Search
             </div>
           </div>
         </div>
-         <MapContainer center={this.state.initcenter} fullscreenControl={true} zoom={this.state.zoomlevel}  whenCreated={map => this.setState({map})} style={{ height: '100%' }}>
+         <MapContainer center={this.state.initcenter} fullscreenControl={true} zoom={this.state.zoomlevel}  whenCreated={map => this.setState({map})} style={{ height: '100vh' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
