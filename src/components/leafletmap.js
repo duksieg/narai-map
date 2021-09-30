@@ -27,9 +27,6 @@ class LeafletMap extends React.Component {
     this.setState({value: event.target.value});
   }
 
-  
-
-
   usemapcenter(event) {
     try {
       let record = this.props.user.records
@@ -61,10 +58,6 @@ class LeafletMap extends React.Component {
       console.error(err)
     }
   }
-
-  
-
-
 
   renderuserfromdata() {
     let temparry = []
@@ -116,8 +109,6 @@ class LeafletMap extends React.Component {
     return temparry
   }
 
-
-
   render() {
     if (typeof window !== 'undefined'){
       { 
@@ -146,5 +137,6 @@ class LeafletMap extends React.Component {
       }
   }
     
+}
 }
 export default LeafletMap
