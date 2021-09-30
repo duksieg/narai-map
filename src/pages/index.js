@@ -42,7 +42,7 @@ class IndexPage extends React.Component{
   }
 
   render(){
-    if (isBrowser){
+    if (typeof window !== 'undefined'){
       { 
         this.updatetimepage()}
      

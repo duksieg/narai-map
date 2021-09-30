@@ -2,7 +2,10 @@
 import React from "react";
 import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css'
-import L from 'leaflet'
+if (typeof window !== `undefined`) {
+  import L from 'leaflet'
+}
+
 import * as mapicon from '../components/mapicon'
 const isBrowser = typeof window !== "undefined"
 
