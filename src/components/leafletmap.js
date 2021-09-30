@@ -4,7 +4,7 @@ import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import * as mapicon from '../components/mapicon'
-import {  ShimmerThumbnail } from 'react-shimmer-effects'
+const isBrowser = typeof window !== "undefined"
 
 class LeafletMap extends React.Component {
   constructor(props) {
