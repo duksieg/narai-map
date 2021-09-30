@@ -1,8 +1,7 @@
 import React from "react";
 import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
-import {L} from 'leaflet/dist/leaflet-src.esm'
+import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import 'react-bootstrap/dist/react-bootstrap'
 import * as mapicon from '../components/mapicon'
 class LeafletMap extends React.Component {
   constructor(props) {
@@ -109,6 +108,8 @@ class LeafletMap extends React.Component {
 
   render() {
     if (typeof window !== 'undefined'){
+      
+    }
     return (
       <>
         <div className="form d-flex justify-content-center my-4">
@@ -122,17 +123,16 @@ class LeafletMap extends React.Component {
             </div>
           </div>
         </div>
-        {process.env.BROWSER && (
          <MapContainer center={this.state.initcenter} fullscreenControl={true} zoom={this.state.zoomlevel}  whenCreated={map => this.setState({map})} style={{ height: '100vh' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
           {this.renderuserfromdata()}
-        </MapContainer>)}
+        </MapContainer>
       </>
     );
-    }
+    
   }
     
 
