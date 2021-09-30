@@ -1,6 +1,6 @@
 import React from "react";
 import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
-import L from 'leaflet/dist/leaflet'
+import L from 'leaflet/dist/leaflet-src.esm'
 import 'leaflet/dist/leaflet.css'
 import * as mapicon from '../components/mapicon'
 class LeafletMap extends React.Component {
