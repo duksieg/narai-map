@@ -1,14 +1,10 @@
 
 import React from "react";
+const isBrowser = typeof window !== "undefined"
 import {  Popup, TileLayer, Marker, MapContainer } from "react-leaflet";
 import 'leaflet/dist/leaflet.css'
-if (typeof window !== `undefined`) {
-  import L from 'leaflet'
-}
-
+import L from 'leaflet/dist/leaflet'
 import * as mapicon from '../components/mapicon'
-const isBrowser = typeof window !== "undefined"
-
 class LeafletMap extends React.Component {
   constructor(props) {
     super(props)
